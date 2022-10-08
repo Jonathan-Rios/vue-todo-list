@@ -1,38 +1,17 @@
 <template>
   <v-app id="inspire">
-    <!-- <v-navigation-drawer
-      v-model="drawer"
-      app
-    >
-    </v-navigation-drawer> -->
-
-    <v-navigation-drawer
-      v-model="drawer"
-      app
-    >
+    <v-navigation-drawer v-model="drawer" app>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Vue.js
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            Lista de tarefas
-          </v-list-item-subtitle>
+          <v-list-item-title class="text-h6"> Vue.js </v-list-item-title>
+          <v-list-item-subtitle> Lista de tarefas </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
       <v-divider></v-divider>
 
-      <v-list
-        dense
-        nav
-      >
-        <v-list-item
-          v-for="item in items"
-          :key="item.title"
-          :to="item.to"
-          link
-        >
+      <v-list dense nav>
+        <v-list-item v-for="item in items" :key="item.title" :to="item.to" link>
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -44,19 +23,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <!-- <v-app-bar app>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Application</v-toolbar-title>
-    </v-app-bar> -->
-
-    <v-app-bar
-      app
-      color="#fcb69f"
-      dark
-      prominent
-      src="https://picsum.photos/1920/1080?random"
-    >
+    <v-app-bar app color="#fcb69f" dark prominent src="https://picsum.photos/1920/1080?random">
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
@@ -64,9 +31,9 @@
         ></v-img>
       </template>
 
-      <v-app-bar-nav-icon  @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Title</v-app-bar-title>
+      <v-app-bar-title>Todo List</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
